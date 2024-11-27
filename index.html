@@ -8,17 +8,15 @@
 </head>
 <body>
     <header>
-    <div class="logo">PodPIVO</div>
-    <nav class="main-nav">
-    </nav>
-    <nav class="top-right-nav">
-        <a href="series.html">Сериалы</a>
-        <a href="movies.html">Фильмы</a>
-        <a href="anime.html">Аниме</a>
-        <a href="cartoons.html">Мультфильмы</a>
-    </nav>
-</header>
-
+        <div class="logo">PodPIVO</div>
+        <nav class="main-nav"></nav>
+        <nav class="top-right-nav">
+            <a href="series.html">Сериалы</a>
+            <a href="movies.html">Фильмы</a>
+            <a href="anime.html">Аниме</a>
+            <a href="cartoons.html">Мультфильмы</a>
+        </nav>
+    </header>
 
     <main>
         <!-- Каталог фильмов -->
@@ -67,6 +65,44 @@
 
                 <button type="submit">Отправить</button>
             </form>
+        </section>
+
+        <!-- Поиск фильма -->
+        <section id="search" class="section">
+            <h1>Поиск фильма</h1>
+            <h2>Поиск по ID Кинопоиска</h2>
+            <div class="kinobox_player"></div>
+            <script src="https://kinobox.tv/kinobox.min.js"></script>
+            <script>kbox('.kinobox_player', {search: {kinopoisk: 'ID_ФИЛЬМА'}})</script>
+
+            <h2>Поиск по IMDb ID</h2>
+            <div class="kinobox_player"></div>
+            <script>kbox('.kinobox_player', {search: {imdb: 'ID_ФИЛЬМА'}})</script>
+
+            <h2>Поиск по TMDB ID</h2>
+            <div class="kinobox_player"></div>
+            <script>kbox('.kinobox_player', {search: {tmdb: 'ID_ФИЛЬМА'}})</script>
+
+            <h2>Поиск по названию</h2>
+            <div class="kinobox_player"></div>
+            <script>kbox('.kinobox_player', {search: {title: 'НАЗВАНИЕ_ФИЛЬМА'}})</script>
+
+            <h2>Поиск с автоопределением параметра</h2>
+            <div class="kinobox_player"></div>
+            <script>kbox('.kinobox_player', {search: {query: 'ID_ИЛИ_НАЗВАНИЕ'}})</script>
+
+            <h2>Поиск по нескольким параметрам</h2>
+            <div class="kinobox_player"></div>
+            <script>
+                kbox('.kinobox_player', {
+                    search: {
+                        kinopoisk: 'KINOPOISK_ID',
+                        imdb: 'IMDB_ID',
+                        tmdb: 'TMDB_ID',
+                        title: 'НАЗВАНИЕ'
+                    }
+                });
+            </script>
         </section>
     </main>
 
