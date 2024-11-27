@@ -5,6 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Плеер фильма</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Центрируем контейнер плеера */
+        #player-section {
+            display: flex;
+            justify-content: center; /* Центрируем по горизонтали */
+            align-items: center; /* Центрируем по вертикали */
+            height: 100vh; /* Высота 100% от экрана */
+        }
+
+        #kinobox-player {
+            width: 700px; /* Ширина плеера */
+            height: 400px; /* Высота плеера */
+        }
+
+        /* Можно добавить немного стилей для страницы */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -22,7 +50,7 @@
         <section id="player-section" class="section">
             <h1>Плеер для фильма</h1>
 
-            <div id="kinobox-player" class="kinobox_player" style="width: 700px; height: 400px;"></div>
+            <div id="kinobox-player" class="kinobox_player"></div>
 
             <script src="https://kinobox.tv/kinobox.min.js"></script>
 
