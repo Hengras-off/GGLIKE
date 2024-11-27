@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сайт фильмов и сериалов</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+    <div class="logo">PodPIVO</div>
+    <nav class="main-nav">
+    </nav>
+    <nav class="top-right-nav">
+        <a href="series.html">Сериалы</a>
+        <a href="movies.html">Фильмы</a>
+        <a href="anime.html">Аниме</a>
+        <a href="cartoons.html">Мультфильмы</a>
+    </nav>
+</header>
+
+
+    <main>
+        <!-- Каталог фильмов -->
+        <section id="catalog" class="section">
+            <h1>Каталог фильмов</h1>
+            <div class="movie-grid">
+                <div class="movie">
+                    <a href="https://onlinevkino.com/6467-oppengeymer-2023.html" target="_blank">
+                        <img src="film1.jpg" alt="Фильм 1">
+                        <h2>Фильм 1</h2>
+                    </a>
+                </div>
+                <div class="movie">
+                    <a href="https://example.com/film2" target="_blank">
+                        <img src="film2.jpg" alt="Фильм 2">
+                        <h2>Фильм 2</h2>
+                    </a>
+                </div>
+                <div class="movie">
+                    <a href="https://example.com/film3" target="_blank">
+                        <img src="film3.jpg" alt="Фильм 3">
+                        <h2>Фильм 3</h2>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Новинки -->
+        <section id="new" class="section">
+            <h1>Новинки</h1>
+            <p>Здесь будут представлены новые фильмы и сериалы.</p>
+        </section>
+
+        <!-- Обратная связь -->
+        <section id="contact" class="section">
+            <h1>Обратная связь</h1>
+            <form action="#" method="post">
+                <label for="name">Имя:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Электронная почта:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Сообщение:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit">Отправить</button>
+            </form>
+        </section>
+    
+        <!-- Плееры Kinobox -->
+        <section id="kinobox" class="section">
+            <h1>Плееры Kinobox</h1>
+            
+            <h2>Поиск по ID Кинопоиска</h2>
+            <div class="kinobox_player" style="width: 700px;"></div>
+            <script src="https://kinobox.tv/kinobox.min.js"></script>
+            <script>kbox('.kinobox_player', {search: {kinopoisk: '1234567'}})</script>
+            
+            <h2>Поиск по IMDb ID</h2>
+            <div class="kinobox_player" style="width: 700px;"></div>
+            <script>kbox('.kinobox_player', {search: {imdb: 'tt1234567'}})</script>
+
+            <h2>Поиск по TMDB ID</h2>
+            <div class="kinobox_player" style="width: 700px;"></div>
+            <script>kbox('.kinobox_player', {search: {tmdb: '7654321'}})</script>
+
+            <h2>Поиск по названию</h2>
+            <div class="kinobox_player" style="width: 700px;"></div>
+            <script>kbox('.kinobox_player', {search: {title: 'Пример Названия'}})</script>
+
+            <h2>Поиск с автоопределением параметра</h2>
+            <div class="kinobox_player" style="width: 700px;"></div>
+            <script>kbox('.kinobox_player', {search: {query: 'Название или ID'}})</script>
+
+            <h2>Поиск по нескольким параметрам</h2>
+            <div class="kinobox_player" style="width: 700px;"></div>
+            <script>
+                kbox('.kinobox_player', {
+                    search: {
+                        kinopoisk: '1234567',
+                        imdb: 'tt1234567',
+                        tmdb: '7654321',
+                        title: 'Пример Названия'
+                    }
+                });
+            </script>
+        </section>
+    </main>
+    
+
+    <footer>
+        <p>&copy; 2024 PodPIVO. Все права защищены.</p>
+    </footer>
+</body>
+</html>
+
