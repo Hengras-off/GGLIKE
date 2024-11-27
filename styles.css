@@ -158,3 +158,64 @@ nav a:hover {
 .search-bar::placeholder {
     color: #888;
 }
+
+/* Стили для общего хедера */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #242424;
+    border-bottom: 2px solid #00ced1;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Основное меню (слева) */
+.main-nav {
+    display: flex;
+    gap: 15px;
+}
+
+.main-nav a {
+    color: #f0f0f0;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px 15px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.main-nav a:hover {
+    background-color: #00ced1;
+    color: #1c1c1c;
+}
+
+/* Правое меню */
+.top-right-nav {
+    display: flex;
+    gap: 15px;
+}
+
+.top-right-nav a {
+    color: #f0f0f0;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px 15px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.top-right-nav a:hover {
+    background-color: #00ced1;
+    color: #1c1c1c;
+}
+
+/* Уравновешивание размещения элементов */
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #00ced1;
+    flex-grow: 1;
+}
