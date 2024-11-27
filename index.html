@@ -3,60 +3,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Рабочий пример плеера Kinobox</title>
+    <title>Сайт фильмов и сериалов</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Рабочий пример плеера Kinobox</h1>
+    <header>
+        <div class="logo">PodPIVO</div>
+        <nav class="main-nav"></nav>
+        <nav class="top-right-nav">
+            <a href="series.html">Сериалы</a>
+            <a href="movies.html">Фильмы</a>
+            <a href="anime.html">Аниме</a>
+            <a href="cartoons.html">Мультфильмы</a>
+        </nav>
+    </header>
 
-    <!-- Подключение плеера по ID Кинопоиска -->
-    <h2>Поиск по ID Кинопоиска</h2>
-    <div class="kinobox_player" style="width: 700px; height: 400px;"></div>
-    <script src="https://kinobox.tv/kinobox.min.js"></script>
-    <script>
-        kbox('.kinobox_player', {search: {kinopoisk: '301'}}); // Пример реального ID фильма
-    </script>
+    <main>
+        <!-- Каталог фильмов -->
+        <section id="catalog" class="section">
+            <h1>Каталог фильмов</h1>
+            <div class="movie-grid">
+                <div class="movie">
+                    <a href="https://onlinevkino.com/6467-oppengeymer-2023.html" target="_blank">
+                        <img src="film1.jpg" alt="Фильм 1">
+                        <h2>Фильм 1</h2>
+                    </a>
+                </div>
+                <div class="movie">
+                    <a href="https://example.com/film2" target="_blank">
+                        <img src="film2.jpg" alt="Фильм 2">
+                        <h2>Фильм 2</h2>
+                    </a>
+                </div>
+                <div class="movie">
+                    <a href="https://example.com/film3" target="_blank">
+                        <img src="film3.jpg" alt="Фильм 3">
+                        <h2>Фильм 3</h2>
+                    </a>
+                </div>
+            </div>
+        </section>
 
-    <!-- Подключение плеера по IMDb ID -->
-    <h2>Поиск по IMDb ID</h2>
-    <div class="kinobox_player" style="width: 700px; height: 400px;"></div>
-    <script>
-        kbox('.kinobox_player', {search: {imdb: 'tt1375666'}}); // Пример реального ID фильма IMDb
-    </script>
+        <!-- Новинки -->
+        <section id="new" class="section">
+            <h1>Новинки</h1>
+            <p>Здесь будут представлены новые фильмы и сериалы.</p>
+        </section>
 
-    <!-- Подключение плеера по TMDB ID -->
-    <h2>Поиск по TMDB ID</h2>
-    <div class="kinobox_player" style="width: 700px; height: 400px;"></div>
-    <script>
-        kbox('.kinobox_player', {search: {tmdb: '550'}}); // Пример реального ID TMDB
-    </script>
+        <!-- Плееры Kinobox -->
+        <section id="kinobox" class="section">
+            <h1>Плееры Kinobox</h1>
+            
+            <!-- Подключение плеера по ID Кинопоиска -->
+            <h2>Поиск по ID Кинопоиска</h2>
+            <div class="kinobox_player" style="width: 700px; height: 400px;"></div>
+            <script src="https://kinobox.tv/kinobox.min.js"></script>
+            <script>
+                kbox('.kinobox_player', {search: {kinopoisk: '301'}}); // Пример ID Кинопоиска
+            </script>
 
-    <!-- Подключение плеера по названию -->
-    <h2>Поиск по названию</h2>
-    <div class="kinobox_player" style="width: 700px; height: 400px;"></div>
-    <script>
-        kbox('.kinobox_player', {search: {title: 'Интерстеллар'}}); // Поиск по названию фильма
-    </script>
+            <!-- Подключение плеера по IMDb ID -->
+            <h2>Поиск по IMDb ID</h2>
+            <div class="kinobox_player" style="width: 700px; height: 400px;"></div>
+            <script>
+                kbox('.kinobox_player', {search: {imdb: 'tt1375666'}}); // Пример ID IMDb
+            </script>
 
-    <!-- Автоопределение параметра -->
-    <h2>Поиск с автоопределением параметра</h2>
-    <div class="kinobox_player" style="width: 700px; height: 400px;"></div>
-    <script>
-        kbox('.kinobox_player', {search: {query: 'Интерстеллар'}}); // Автоматическое определение по названию
-    </script>
+            <!-- Подключение плеера по TMDB ID -->
+            <h2>Поиск по TMDB ID</h2>
+            <div class="kinobox_player" style="width: 700px; height: 400px;"></div>
+            <script>
+                kbox('.kinobox_player', {search: {tmdb: '550'}}); // Пример ID TMDB
+            </script>
 
-    <!-- Поиск по нескольким параметрам -->
-    <h2>Поиск по нескольким параметрам</h2>
-    <div class="kinobox_player" style="width: 700px; height: 400px;"></div>
-    <script>
-        kbox('.kinobox_player', {
-            search: {
-                kinopoisk: '301',
-                imdb: 'tt1375666',
-                tmdb: '550',
-                title: 'Интерстеллар'
-            }
-        });
-    </script>
+            <!-- Подключение плеера по названию -->
+            <h2>Поиск по названию</h2>
+            <div class="kinobox_player" style="width: 700px; height: 400px;"></div>
+            <script>
+                kbox('.kinobox_player', {search: {title: 'Интерстеллар'}}); // Поиск по названию
+            </script>
+
+            <!-- Автоопределение параметра -->
+            <h2>Поиск с автоопределением параметра</h2>
+            <div class="kinobox_player" style="width: 700px; height: 400px;"></div>
+            <script>
+                kbox('.kinobox_player', {search: {query: 'Интерстеллар'}}); // Автоопределение по названию
+            </script>
+
+            <!-- Поиск по нескольким параметрам -->
+            <h2>Поиск по нескольким параметрам</h2>
+            <div class="kinobox_player" style="width: 700px; height: 400px;"></div>
+            <script>
+                kbox('.kinobox_player', {
+                    search: {
+                        kinopoisk: '301',
+                        imdb: 'tt1375666',
+                        tmdb: '550',
+                        title: 'Интерстеллар'
+                    }
+                });
+            </script>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 PodPIVO. Все права защищены.</p>
+    </footer>
 </body>
 </html>
 
