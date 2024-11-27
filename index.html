@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сайт фильмов и сериалов</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">КиноМир</div>
+        <nav>
+            <a href="#catalog">Каталог</a>
+            <a href="#new">Новинки</a>
+            <a href="#contact">Обратная связь</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Каталог фильмов -->
+        <section id="catalog" class="section">
+            <h1>Каталог фильмов</h1>
+            <div class="movie-grid">
+                <div class="movie">
+                    <a href="https://example.com/film1" target="_blank">
+                        <img src="film1.jpg" alt="Фильм 1">
+                        <h2>Фильм 1</h2>
+                    </a>
+                </div>
+                <div class="movie">
+                    <a href="https://example.com/film2" target="_blank">
+                        <img src="film2.jpg" alt="Фильм 2">
+                        <h2>Фильм 2</h2>
+                    </a>
+                </div>
+                <div class="movie">
+                    <a href="https://example.com/film3" target="_blank">
+                        <img src="film3.jpg" alt="Фильм 3">
+                        <h2>Фильм 3</h2>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Новинки -->
+        <section id="new" class="section">
+            <h1>Новинки</h1>
+            <p>Здесь будут представлены новые фильмы и сериалы.</p>
+        </section>
+
+        <!-- Обратная связь -->
+        <section id="contact" class="section">
+            <h1>Обратная связь</h1>
+            <form action="#" method="post">
+                <label for="name">Имя:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Электронная почта:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Сообщение:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit">Отправить</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 КиноМир. Все права защищены.</p>
+    </footer>
+</body>
+</html>
