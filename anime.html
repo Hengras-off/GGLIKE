@@ -5,6 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Аниме</title>
     <link rel="stylesheet" href="styles.css">
+    <script>
+        // Функция для поиска аниме
+        function searchAnime() {
+            let input = document.getElementById('searchInput').value.toLowerCase(); // Получаем введённый текст
+            let animeItems = document.querySelectorAll('.anime'); // Получаем все элементы аниме
+
+            // Перебираем все элементы и проверяем, содержат ли они текст, введённый в строку поиска
+            animeItems.forEach(function(anime) {
+                let title = anime.querySelector('h2').textContent.toLowerCase(); // Получаем название аниме
+                if (title.includes(input)) {
+                    anime.style.display = ''; // Показываем элемент, если название совпадает
+                } else {
+                    anime.style.display = 'none'; // Скрываем элемент, если название не совпадает
+                }
+            });
+        }
+    </script>
 </head>
 <body>
     <header>
@@ -19,7 +36,8 @@
     <main>
         <section class="section">
             <h1>Аниме</h1>
-            <input type="text" placeholder="Поиск аниме..." class="search-bar">
+            <!-- Поле поиска с улучшенным стилем -->
+            <input id="searchInput" type="text" placeholder="Поиск аниме..." class="search-bar" oninput="searchAnime()">
             <div class="anime-grid">
                 <div class="anime">
                     <img src="anime1.jpg" alt="Аниме 1">
@@ -27,7 +45,7 @@
                 </div>
                 <div class="anime">
                     <img src="anime2.jpg" alt="Аниме 2">
-                    <h2><a href="https://jut.su/shingekii-no-kyojin/" target="_blank">Атака Титанов</a></h2>
+                    <h2><a href="https://example.com/anime2" target="_blank">Аниме 2</a></h2>
                 </div>
             </div>
         </section>
@@ -37,3 +55,4 @@
     </footer>
 </body>
 </html>
+
