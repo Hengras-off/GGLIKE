@@ -19,35 +19,10 @@
     </header>
 
     <main>
-        <!-- Каталог фильмов -->
-        <section id="catalog" class="section">
-            <h1>Каталог фильмов</h1>
-            <div class="movie-grid">
-                <div class="movie">
-                    <a href="https://onlinevkino.com/6467-oppengeymer-2023.html" target="_blank">
-                        <img src="film1.jpg" alt="Фильм 1">
-                        <h2>Фильм 1</h2>
-                    </a>
-                </div>
-                <div class="movie">
-                    <a href="https://example.com/film2" target="_blank">
-                        <img src="film2.jpg" alt="Фильм 2">
-                        <h2>Фильм 2</h2>
-                    </a>
-                </div>
-                <div class="movie">
-                    <a href="https://example.com/film3" target="_blank">
-                        <img src="film3.jpg" alt="Фильм 3">
-                        <h2>Фильм 3</h2>
-                    </a>
-                </div>
-            </div>
-        </section>
-
         <!-- Форма для поиска фильма по названию -->
         <section id="search-form" class="section">
             <h1>Поиск фильма</h1>
-            <form id="search-film-form">
+            <form id="search-film-form" action="player.html" method="GET">
                 <label for="movie-title">Введите название фильма:</label>
                 <input type="text" id="movie-title" name="movie-title" required>
                 <button type="submit">Найти</button>
@@ -58,27 +33,6 @@
     <footer>
         <p>&copy; 2024 PodPIVO. Все права защищены.</p>
     </footer>
-
-    <!-- Подключение скрипта Kinobox -->
-    <script>
-        // Обработчик формы поиска
-        document.getElementById('search-film-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Получаем название фильма из поля ввода
-            const movieTitle = document.getElementById('movie-title').value.trim();
-
-            // Проверяем, что название фильма не пустое
-            if (movieTitle !== '') {
-                // Сформируем URL для редиректа (например, на Kinobox.tv)
-                const searchURL = `https://kinobox.tv/search/${encodeURIComponent(movieTitle)}`;
-
-                // Перенаправляем пользователя на сайт с плеером
-                window.location.href = searchURL;
-            } else {
-                alert("Пожалуйста, введите название фильма.");
-            }
-        });
-    </script>
 </body>
 </html>
+
