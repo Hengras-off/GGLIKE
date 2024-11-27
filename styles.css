@@ -1,0 +1,109 @@
+/* Общие стили */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #1c1c1c;
+    color: #f0f0f0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #242424;
+    border-bottom: 2px solid #00ced1;
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #00ced1;
+}
+
+nav a {
+    color: #f0f0f0;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+nav a:hover {
+    color: #00ced1;
+}
+
+/* Каталог фильмов */
+.section {
+    padding: 20px;
+    text-align: center;
+}
+
+.movie-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.movie {
+    background-color: #2a2a2a;
+    padding: 10px;
+    border: 2px solid #00ced1;
+    border-radius: 8px;
+    width: 200px;
+    text-align: center;
+}
+
+.movie img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.movie h2 {
+    font-size: 18px;
+    margin: 10px 0;
+    color: #00ced1;
+}
+
+/* Форма обратной связи */
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+form label {
+    text-align: left;
+}
+
+form input, form textarea, form button {
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+}
+
+form input, form textarea {
+    background-color: #333;
+    color: #f0f0f0;
+}
+
+form button {
+    background-color: #00ced1;
+    color: #1c1c1c;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #00a3a3;
+}
+
+/* Подвал */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #242424;
+    border-top: 2px solid #00ced1;
+    color: #f0f0f0;
+}
