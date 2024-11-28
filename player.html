@@ -6,38 +6,32 @@
     <title>Плеер фильма</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-        /* Центрируем контейнер плеера */
         #player-section {
             display: flex;
-            justify-content: center; /* Центрируем по горизонтали */
-            align-items: center; /* Центрируем по вертикали */
-            height: 100vh; /* Высота 100% от экрана */
+            justify-content: center;
+            align-items: center;
+            flex-direction: column; /* Элементы в колонку для мобильных */
+            height: 100vh;
+            padding: 20px;
         }
 
         #kinobox-player {
-            width: 700px; /* Ширина плеера */
-            height: 400px; /* Высота плеера */
+            width: 90%;
+            max-width: 700px;
+            height: auto;
+            aspect-ratio: 16 / 9; /* Для адаптивной высоты */
         }
 
-        /* Можно добавить немного стилей для страницы */
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-        }
-
-        footer {
-            text-align: center;
-            padding: 20px;
-            background-color: #333;
-            color: white;
+        @media (max-width: 768px) {
+            #player-section {
+                padding: 10px;
+            }
         }
     </style>
 </head>
 <body>
     <header>
         <div class="logo">𝘗𝘰𝘥𝘗𝘐𝘝𝘖</div>
-        <nav class="main-nav"></nav>
         <nav class="top-right-nav">
             <a href="index.html">Поиск</a>
             <a href="info.html">Помощь</a>
@@ -45,19 +39,12 @@
     </header>
 
     <main>
-        <section id="player-section" class="section">
-            <!-- Удалена надпись "Плеер для фильма" -->
-
+        <section id="player-section">
             <div id="kinobox-player" class="kinobox_player"></div>
-
             <script src="https://kinobox.tv/kinobox.min.js"></script>
-
             <script>
-                // Получаем параметр movie-title из URL
                 const urlParams = new URLSearchParams(window.location.search);
                 const movieTitle = urlParams.get('movie-title');
-
-                // Если название фильма передано, запускаем поиск через Kinobox
                 if (movieTitle) {
                     kbox('#kinobox-player', {search: {title: movieTitle}});
                 } else {
@@ -72,8 +59,3 @@
     </footer>
 </body>
 </html>
-<nav class="top-right-nav">
-    <a href="index.html">Поиск</a>
-    <a href="info.html">Информация</a>
-</nav>
-
