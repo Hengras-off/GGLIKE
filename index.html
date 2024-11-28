@@ -5,18 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Сайт фильмов и сериалов</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        #search-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        #search-form input, #search-form button {
+            width: 90%; /* Поля и кнопки занимают почти всю ширину */
+            max-width: 400px; /* Ограничение ширины */
+            margin: 10px 0; /* Отступы между элементами */
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        @media (max-width: 768px) {
+            #search-form h1 {
+                font-size: 20px;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
         <div class="logo">𝘗𝘰𝘥𝘗𝘐𝘝𝘖</div>
-        <nav class="main-nav"></nav>
         <nav class="top-right-nav">
-        <a href="info.html">Помощь</a>
+            <a href="info.html">Помощь</a>
         </nav>
     </header>
 
     <main>
-        <!-- Форма для поиска фильма по названию -->
         <section id="search-form" class="section">
             <h1>Поиск фильма</h1>
             <form id="search-film-form" action="player.html" method="GET">
