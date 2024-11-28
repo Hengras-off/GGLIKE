@@ -5,14 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Информация о фильмах</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        @media (max-width: 768px) {
+            .info-content img {
+                max-width: 100%; /* Изображение занимает ширину контейнера */
+                height: auto; /* Сохраняем пропорции */
+            }
+
+            .info-content p {
+                font-size: 14px; /* Уменьшаем текст */
+                padding: 10px; /* Увеличиваем отступы */
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
         <div class="logo">𝘗𝘰𝘥𝘗𝘐𝘝𝘖</div>
         <nav class="main-nav">
             <a href="index.html">Главная</a>
-        </nav>
-        <nav class="top-right-nav">
         </nav>
     </header>
 
